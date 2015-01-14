@@ -59,7 +59,7 @@ body{
 }
 
 footer{
-	position: absolute;
+	position: fixed; /*relative;*/
 	bottom: 0;
 	padding: 15px 0;
 }
@@ -219,8 +219,14 @@ footer{
 			padding: 0px 0px 0px 25px;
 			display: inline-block;
 		}
+		.modal-tabs > li > a:hover{
+			color: #0EA6F3;
+			border-bottom: 5px solid #0EA6F3;
+			text-decoration: none;
+		}
 
-	.modal-body-thumb{
+	.modal-body-video-thumb{
+		display: none;
 		height: 415px;
 		width: 100%;
 	}
