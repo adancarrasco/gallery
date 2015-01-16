@@ -1,5 +1,6 @@
 body{
 	background-color: rgb(241, 241, 241);
+	font-weight: 100;
 }
 
 .header, footer{
@@ -27,7 +28,6 @@ body{
 }
 
 .header{
-	/*position: fixed;*/
 	box-shadow: 0 1px 5px rgba(0,0,0,.3);
 	top: 0;
 }
@@ -90,6 +90,7 @@ footer{
 .row .gallery-item:last-child {
 	border: none;
 	border-bottom: 1px solid #e4e4e4;
+	border-right: 1px solid #e4e4e4;
 }
 
 .item-thumb{
@@ -101,9 +102,8 @@ footer{
 .item-description-wrapper{
 	position: relative;
 	top: 0;
-	/*background-color: rgba(68, 68, 68, 0.9);*/
 	width: 100%;
-	padding: 0px 48px;
+	padding: 0px 35px;
 	color: #000;
 	width: auto;
 }
@@ -145,6 +145,7 @@ footer{
 		margin-bottom: 0;
 		display: inline-block;
 		font-size: 2.7em;
+		font-weight: 200;
 	}
 
 	.modal-title-container > a{
@@ -211,6 +212,7 @@ footer{
 		.modal-tabs > li > a.active{
 			color: #0EA6F3;
 			border-bottom: 5px solid #0EA6F3;
+			text-decoration: none;
 		}
 		.modal-tabs > li > a{
 			color: #a6a6a6;
@@ -224,9 +226,11 @@ footer{
 			border-bottom: 5px solid #0EA6F3;
 			text-decoration: none;
 		}
+		.modal-tabs > li > a:visited{
+			text-decoration: none;
+		}
 
 	.modal-body-video-thumb{
-		display: none;
 		height: 415px;
 		width: 100%;
 	}
@@ -249,16 +253,49 @@ footer{
 	
 	.modal-plugin-description p 
 	{
-		font-size: 0.95em;
+		font-size: 1em;
+		line-height: 1.5em;
 		color: #676767;
 	}
 
-/*@media (min-width: 992px){
-	.col-md-4.gallery-item {
-		width: 30.33333333%;
-		margin-left: 1.5%;
-		margin-right: 1.5%;
-		margin-bottom: 3%;
-		border: solid 1px #f2f2f2;
-	}
-}*/
+/* SLIDER */
+.carousel-inner>.item {
+	height: 415px;
+}
+
+.carousel-caption p, .carousel-caption h4 {
+	color: #626262;
+	text-shadow: 0 1px 2px rgba(200, 200, 200, 0.6);
+}
+
+.carousel-indicators .active{
+	background-color: #000;
+}
+.carousel-indicators li{
+	border: 1px solid #000;
+}
+
+
+/*ANGULAR ANIMATIONS */
+.animate-show {
+  line-height: 20px;
+  opacity: 1;
+}
+
+.animate-show.ng-hide-add.ng-hide-add-active,
+.animate-show.ng-hide-remove.ng-hide-remove-active {
+  -webkit-transition: all linear 1s;
+  transition: all linear 1s;
+}
+
+.animate-show.ng-hide {
+  line-height: 0;
+  opacity: 0;
+  padding: 0 10px;
+}
+
+.check-element {
+  padding: 10px;
+  border: 1px solid black;
+  background: white;
+}
